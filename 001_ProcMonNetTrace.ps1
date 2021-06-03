@@ -111,7 +111,7 @@ while ($key -ne "x"){
 $stopCommand = "$WorkingDir\ProcessMonitor\procmon.exe /terminate"
 Invoke-Expression -Command $stopCommand
 Out-Verbose "Process Monitor trace Stoppped, file $WorkingDir\$timestamp\$($ENV:COMPUTERNAME).PML"
-Out-Verbose "Attempting to stop traces, this may take a while..."
+Out-Verbose "Attempting to stop traces, this may take a while (sometimes even more than 10 mins)..."
 Netsh trace stop
 Out-Verbose "Packet Capture Stopped, location $WorkingDir\$timestamp\$($ENV:Computername)_NetConIntCliTrace.cab"
 
