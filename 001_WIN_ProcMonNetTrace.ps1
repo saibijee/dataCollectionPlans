@@ -34,6 +34,8 @@ Function Out-Verbose {
 
 }
 
+Out-Verbose "001_WIN_ProcMonNetTrace.ps1|Version 1.0|2021-06-03|Sohaib Shaheed|soshah@microsoft.com"
+
 $WorkingDir = "C:\temp"
 $timestamp = Get-Date -Format yyyyMMddHHmmss
 
