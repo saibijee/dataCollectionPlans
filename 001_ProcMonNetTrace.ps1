@@ -114,6 +114,7 @@ Out-Verbose "Process Monitor trace Stoppped, file $WorkingDir\$timestamp\$($ENV:
 Out-Verbose "Attempting to stop traces, this may take a while (sometimes even more than 10 mins)..."
 Netsh trace stop
 Out-Verbose "Packet Capture Stopped, location $WorkingDir\$timestamp\$($ENV:Computername)_NetConIntCliTrace.cab"
-
+Out-Verbose "Compressing $WorkingDir\$timestamp"
+Compress-Archive -Path "$WorkingDir\$timestamp" -DestinationPath "$WorkingDir\$timestamp.zip"
 Out-Verbose "Please compress/zip the folder $WorkingDir\$timestamp and upload to the Secure Upload Location for your Microsoft Case. If you do not have the link, please ask the case owner for it."
 
