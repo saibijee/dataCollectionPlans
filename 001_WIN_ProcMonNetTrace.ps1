@@ -118,5 +118,5 @@ Netsh trace stop
 Out-Verbose "Packet Capture Stopped, location $WorkingDir\$timestamp\$($ENV:Computername)_NetConIntCliTrace.cab"
 Out-Verbose "Compressing $WorkingDir\$timestamp"
 Compress-Archive -Path "$WorkingDir\$timestamp" -DestinationPath "$WorkingDir\$timestamp.zip" -verbose
-remove-item -path "$workingDir\$timestamp" -recurse -force -verbose
+#remove-item -path "$workingDir\$timestamp" -recurse -force -verbose
 Out-Verbose "Please upload $WorkingDir\$timestamp.zip to the Secure Upload Location for your Microsoft Case. If you do not have the link, please ask the support engineer for it."
